@@ -1,0 +1,10 @@
+Aug 22 08:29:22 noot smbd_audit[10522]: nobody|198.51.100.233|templates
+Aug 22 08:29:22 noot smbd_audit[10522]: nobody|198.51.100.233|templates|closedir|ok|
+Aug 22 08:29:26 noot smbd_audit[10522]: nobody|198.51.100.233|templates|open|ok|r|ebb3945c-12a3-40de-b973-5a3408709346.xslt
+Aug 22 08:29:27 noot smbd_audit[10522]: nobody|198.51.100.233|templates|pread|ok|ebb3945c-12a3-40de-b973-5a3408709346.xslt
+Aug 22 08:29:27 noot smbd_audit[10522]: nobody|198.51.100.233|templates|close|ok|ebb3945c-12a3-40de-b973-5a3408709346.xslt
+Aug 22 08:29:28 noot smbd_audit[10522]: nobody|198.51.100.233|templates|disconnect|ok|templates
+Aug 22 08:45:52 noot smbd_audit[11385]: nobody|198.51.100.233|templates|connect|ok|templates
+Aug 22 08:45:53 noot smbd_audit[11385]: nobody|198.51.100.233|templates|open|ok|r|.
+Aug 22 08:45:53 noot smbd_audit[11385]: nobody|198.51.100.233|templates|closedir|ok|
+Aug 22 08:45:53 noot smbd_audit[11385]: nobody|198.51.100.233|templates|disconnect|ok|templates
