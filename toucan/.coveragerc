@@ -1,0 +1,22 @@
+[run]
+ omit = 
+    */migrations/*
+    */__init__.py
+    */.env/*
+    venv/*
+ source =
+    .
+
+[report]
+ omit = 
+    */.env/*
+    venv/*
+    */migrations/*
+    */__init__.py
+    */canary_utils/test_helpers.py
+    */canary_api/settings.py
+    */tests.py
+    */apps.py
+    canary_api/wsgi.py
+    */pathmagic.py
+    manage.py

@@ -1,0 +1,5 @@
+[report]
+ include = 
+   */views.py
+   */models.py
+   canary_utils/lib/daemon.py
