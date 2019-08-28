@@ -51,7 +51,7 @@ jobs:
           command: |
             . venv/bin/activate
             # yes this is a test key
-            export DJANGO_SERVER_TYPE=test; cd django
+            export DJANGO_SERVER_TYPE=test; cd toucan
             export SECRET_KEY=w1bCQaHD537HMvDXv9QxAfdJbEOdBc4RkOOkTsOwDI4=
             coverage run ./manage.py test
             coverage report --rcfile=.coveragerc_critical --fail-under=100
