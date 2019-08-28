@@ -1,0 +1,1 @@
+[{"model": "manage_api.smtpsetting", "pk": 1, "fields": {"smtp_server": "mail.non-existing.nl", "smtp_port": 25, "ssl": true, "subject": "CANARY", "sender": "canary@non-existing.nl", "default_recv": "alert@non-existing.nl"}}]

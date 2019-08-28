@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/static/admin/css/base.css">
+        <link rel="stylesheet" type="text/css" href="/static/admin/css/dashboard.css">
+        <style type="text/css">
+            #maintable td.red {color: #f72000;}
+        </style>
+    </head>
+    <body>
+        <div class="content container">
+        <h1>Results for {{hash}}</h1>
+        {% if report != False %}
+            <p> These are the results, as found on VirusTotal.</br>
+            Source: <a href="{{report}}">{{report}}</a></p>
+        {% endif %}
+        <table id="maintable">
+            <Tr>
+                <td><b>Vendor</b></td>
+                <td><b>Detected</b></td>
+                <td><b>Version</b></td>
+                <td><b>Result</b></td>
+                <td><b>Update</b></td>
+        {% for scan in contents %}
+            {% if scan.1.detected == True %}
+            <tr>
+                <td>{{scan.0}}</td>
+                <td class="red">{{scan.1.detected}}</td>
+                <td>{{scan.1.version}}</td>
+                <td class="red">{{scan.1.result}}</td>
+                <td>{{scan.1.update}}</td>
+            </tr>
+            {% else %}
+             <tr>
+                 <td>{{scan.0}}</td>
+                 <td>{{scan.1.detected}}</td>
+                 <td>{{scan.1.version}}</td>
+                 <td>{{scan.1.result}}</td>
+                 <td>{{scan.1.update}}</td>
+             </tr>
+            {% endif %}
+        {% endfor %}
+        </table>
+        </div>
+    </body>
+</html>

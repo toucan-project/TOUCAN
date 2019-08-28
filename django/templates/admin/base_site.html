@@ -1,0 +1,164 @@
+{% extends "admin/base_site.html" %}
+{% load staticfiles%}
+{% block extrahead %}
+    <style>
+        body {
+            color: #aaaaaa;
+            background: #000;
+        }
+        #header {
+            background: #005077;
+        }
+        body.login {
+            background: #000000;
+            background-image: url('{% static "toucan.png" %}');
+            background-position: top 5% right 50%;
+        }
+        #changelist #toolbar form input {
+            color: #aaaaaa;
+        }
+        .login #container {
+            border: 1px solid #00000057;
+        }
+        div.breadcrumbs {
+            background: #355c6f;
+            color: #7b7b7b;
+        }
+        div.breadcrumbs a {
+            color: #7b7b7b;
+        }
+        .module {
+            background: #251f1f;
+        }
+        .row1 {
+            background: #251f1f;
+        }
+        .row2 {
+            background: #251f1f;
+        }
+        .form-row {
+           border-top: 1px solid #313131;
+           border-bottom: 1px solid #313131;
+        }
+        .submit-row {
+            background: #251f1f;
+            border: 1px solid #313131;
+        }
+        #content-related {
+            background: #251f1f;
+        }
+        #content-related .module h2 {
+            color: #7b7b7b;
+            background: #251f1f;
+        }
+        #changelist-filter {
+            color: #7b7b7b;
+            background: #251f1f;
+        }
+        .module h2, .module caption, .inline-group h2 {
+            background: #005077;
+            color: #fff;
+        }
+        #changelist .paginator {
+            color: #666;
+            background: #251f1f;
+            border: 1px solid #313131;
+        }
+        #changelist #toolbar {
+            border: 1px solid #313131;
+            background: #251f1f;
+            color: #666;
+        }
+        thead th {
+            background: #251f1f;
+            border-top: 1px solid #313131;
+            border-bottom: 1px solid #313131;
+        }
+        thead th.sorted {
+            background: #353030;
+        }
+        #changelist table tbody tr.selected {
+            background: #353030;
+        }
+        #changelist-filter li.selected {
+            background: #353030;
+        }
+        table thead th .text a:focus, table thead th .text a:hover {
+            background: #4a4141;
+        }
+        td, th {
+            border-bottom: 1px solid #313131;
+        }
+        a:focus, a:hover {
+            color: #696b6d;
+        }
+        #changelist .actions {
+           background: #251f1f;
+           line-height: 24px;
+        }
+        #changelist .actions .button {
+            border: 1px solid #404040;
+            background: #828282;
+        }
+        #changelist .actions select {
+            background: #251f1f;
+            color: #967c7c;
+            border: 1px solid #404040;
+        }
+        .required label, label.required {
+            font-weight: bold;
+            color: #7b7b7b;
+        }
+        input, textarea, select, .form-row p, form .button {
+            background: #313131;
+            color: #7b7b7b;
+            border: 1px solid #6c6c6c;
+        }
+        #changelist #toolbar form input[type="submit"] {
+            border: 1px solid #404040;
+            background: #828282;
+        }
+        .button, input[type=submit], input[type=button], .submit-row input, a.button {
+            background: #193340;
+            color: #fff;
+        }
+        .submit-row a.closelink {
+            background: #3e2d4e;
+        }
+        .delete-confirmation form .cancel-link {
+            color: #aaaaaa;
+            background: #313131;
+        }
+        .delete-confirmation form .cancel-link:hover {
+            color: #aaaaaa;
+            background: #2a3033;
+        }
+        .submit-row a.closelink:hover {
+            background: #2a3033;
+        }
+        .button:active, input[type=submit]:active, input[type=button]:active, .button:focus, input[type=submit]:focus, input[type=button]:focus, .button:hover, input[type=submit]:hover, input[type=button]:hover {
+            background: #2a3033;
+        }
+        .button.default, input[type=submit].default, .submit-row input.default {
+            background: #3e2d4e;
+        }
+        .button.default:active, input[type=submit].default:active, .button.default:focus, input[type=submit].default:focus, .button.default:hover, input[type=submit].default:hover {
+            background: #2a3033;
+        }
+        .object-tools a:link, .object-tools a:visited {
+            background: #6b6b6b;
+            color: #fff;
+        }
+        .object-tools a:focus, .object-tools a:hover {
+            background-color: #4a4b4c;
+        }
+        div.deployfail p {
+            color: red;
+        }
+        div.deployfail a {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+{% endblock %}
