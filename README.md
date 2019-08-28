@@ -1,4 +1,5 @@
 # TOUCAN
+Toucan is a canary framework that can be used to work with office documents and PDFs. 
 <!-- vim-markdown-toc GitLab -->
 
 * [Prequisities](#prequisities)
