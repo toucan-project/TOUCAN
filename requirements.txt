@@ -1,0 +1,17 @@
+coreapi==2.3.3
+Markdown==3.1.1
+Django>=2.1.7
+djangorestframework>=3.9.1
+requests>=2.19.2
+mysqlclient==1.4.2.post1
+pyaml==18.11.0
+ansible==2.7.10
+coverage==5.0a5
+ssdeep
+safety
+bandit
+pyopenssl
+defusedxml
+python-magic
+python-dotenv
+django-rq-scheduler

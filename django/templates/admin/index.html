@@ -1,0 +1,17 @@
+{% extends "admin/index.html" %}
+{% block content %}
+
+    {% if failed_deployments.count %}
+    <div class="deployfail">
+        <p> There are <a href="{% url 'admin:canary_files_deployment_changelist'  %}?state__exact=failed">{{ failed_deployments.count }} failed deployments</a>!</p>
+    </div>
+    {% endif %}
+
+    {% if ssl_warnings.count %}
+    <div class="deployfail">
+        <p> There are <a href="{% url 'admin:canary_log_api_canarylogitem_changelist'  %}?q=SSL+WARNING">SSL issues</a>!</p>
+    </div>
+    {% endif %}
+
+{{block.super}}
+{% endblock %}

@@ -1,0 +1,1 @@
+[{"model": "manage_api.smssetting", "pk": 1, "fields": {"sms_server": "api.kpn.com/auth/v1/token?grant_type=client_credentials", "sms_endpoint": "api.kpn.com/messaging/v1/message/sms", "sms_client": "KPN-DEMO_CLIENT", "sms_secret": "suchsecret"}}]
