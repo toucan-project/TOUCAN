@@ -1,0 +1,2 @@
+[bandit]
+exclude: canary_utils/test_helpers.py,*/tests.py,*/*/tests.py 
