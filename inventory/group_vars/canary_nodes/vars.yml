@@ -1,0 +1,7 @@
+label: node                  
+syslog_ip: <main_ip>         # the ip of the syslog server
+syslog_host: <main_hostname> # the hostname of the syslog server
+hostname: <node_ip>          # hostname or ip of this machine
+ansible_ssh_user: <username>
+ansible_become_user: root
+ansible_python_interpreter: /usr/bin/python3

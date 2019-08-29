@@ -1,0 +1,5 @@
+secret_key: <key>           # the django secret
+redis_password: <password>
+mysql_password: <password>
+ansible_sudo_pass: <password>
+vault_key: <key>

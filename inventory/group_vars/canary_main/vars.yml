@@ -1,0 +1,10 @@
+label: master                # the ip of the server itself
+syslog_ip: <ip>              # the ip of the server hosting the canary services (canary_node)
+nginx_ip: <ip>               # the hostname of this machine
+hostname: <hostname>         # the domain used (example.org)
+main_domain: <hostname>      # the authorative domain (auth.example.org)
+auth_domain: <auth_do  main> # the user to authenticate with
+ansible_ssh_user: <ssh_user> # the user to become
+ansible_become_user: root
+ansible_python_interpreter: /usr/bin/python3
+mysql_user: <username>
