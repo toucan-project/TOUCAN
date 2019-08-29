@@ -1,4 +1,3 @@
-take CA
 mkdir certs crl newcerts private
 cp /dev/null index.txt
 openssl req -new -x509 -keyout private/cakey.pem -out cacert.pem -days 1825 -config openssl.cnf
