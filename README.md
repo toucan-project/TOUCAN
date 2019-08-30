@@ -18,7 +18,7 @@ There are two machines required for this to work.
 
 1. Canary machine, with an HTTP server and SMB.
 2. Alert machine, has DNS and `syslog-ng` listeners.
-3. A subdomain, having the alert machine as the (authoritative DNS server cracked)[https://www.dnsknowledge.com/whatis/authoritative-name-server/].
+3. A subdomain, having the alert machine as the [authoritative DNS server cracked](https://www.dnsknowledge.com/whatis/authoritative-name-server/).
 
 The canary machine pushes logs to the alert machine, and in case of an event coming from a canary document, sends an alert to a predefined user.
 
