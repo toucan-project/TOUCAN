@@ -8,6 +8,7 @@ Toucan is a canary framework that can be used to work with office documents and 
         * [Hosts file](#hosts-file)
         * [Main server inventory](#main-server-inventory)
         * [Node server inventory](#node-server-inventory)
+        * [Generate a CA certificate](#generate-a-ca-certificate)
 * [Installation](#installation)
 
 <!-- vim-markdown-toc -->
@@ -131,6 +132,14 @@ ansible_sudo_pass: <secret_password>
 
 Specify the sudo password for the `deploy` user, and run the `ansible-vault encrypt` command again, to encrypt the vault.
 
+#### Generate a CA certificate
+The syslog server is setup with mTLS. Clients need to be authenticated with a client certificate. To generate the certificates go into the `CA/managed_certificates` and run `./generate_ca.sh`. If you do not feel like repeating yourself, fill out some details in `openssl.cnf` under `req_distinguished_name`.
+
+When done generating the certificate, and before making a deployment, generate two client certificates. Go back into `CA` and run `./add_new_client.sh`.
+For the first certificate, fill out the fully qualified hostname of the main (syslog) server. As defined by the `syslog_host` Ansible value. In the case of our (mock) configuration, this would be: `toucan.example.org`.
+
+The second client certificate can be generated with either the hostname of the canary node server, or the IP address. Remember the 'node hashe', as you need to define the hash when running the deployment, so that Ansible knows which certificate to pick up.
+
 ## Installation
 Initialize the submodule containing the Ansible deploy scripts.
 
@@ -141,6 +150,6 @@ $ git submodule update --init
 This will add the deployment scripts to the Ansible directory. Go into the `ansible` directory and run the following command:
 
 ```bash
-$ ansible-playbook deploy-canary.yml --ask-vault-pass -i ../inventory
+$ ansible-playbook deploy-syslog.yml --ask-vault-pass -i ../inventory
 ```
 
