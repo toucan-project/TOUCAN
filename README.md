@@ -18,7 +18,7 @@ There are two machines required for this to work.
 
 1. Canary machine, with an HTTP server and SMB.
 2. Alert machine, has DNS and `syslog-ng` listeners.
-3. A subdomain, having the alert machine as the (authoritative DNS server][https://www.dnsknowledge.com/whatis/authoritative-name-server/].
+3. A subdomain, having the alert machine as the (authoritative DNS server cracked)[https://www.dnsknowledge.com/whatis/authoritative-name-server/].
 
 The canary machine pushes logs to the alert machine, and in case of an event coming from a canary document, sends an alert to a predefined user.
 
@@ -138,7 +138,7 @@ The syslog server is setup with mTLS. Clients need to be authenticated with a cl
 When done generating the certificate, and before making a deployment, generate two client certificates. Go back into `CA` and run `./add_new_client.sh`.
 For the first certificate, fill out the fully qualified hostname of the main (syslog) server. As defined by the `syslog_host` Ansible value. In the case of our (mock) configuration, this would be: `toucan.example.org`.
 
-The second client certificate can be generated with either the hostname of the canary node server, or the IP address. Remember the 'node hashe', as you need to define the hash when running the deployment, so that Ansible knows which certificate to pick up.
+The second client certificate can be generated with either the hostname of the canary node server, or the IP address. Remember the 'node hash', as you need to define the hash when running the deployment, so that Ansible knows which certificate to pick up.
 
 ## Installation
 Initialize the submodule containing the Ansible deploy scripts.
@@ -153,3 +153,15 @@ This will add the deployment scripts to the Ansible directory. Go into the `ansi
 $ ansible-playbook deploy-syslog.yml --ask-vault-pass -i ../inventory
 ```
 
+When asked for the node hash, fill out the hash identifier for the main syslog server, the deployment script will whitelist your current IP address to access the admin interface when the deployment is complete. 
+
+When the installation is done, and you are greeted by the following login portal: <screenshot>
+
+
+The deployment was successful. Now deploy the canary node server, using:
+
+```bash
+$ ansible-playbook deploy-node.yml --ask-vault-pass -i ../inventory
+```
+
+Fill in the corresponding node hash, and wait for the deployment to complete.
