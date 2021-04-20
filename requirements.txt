@@ -5,7 +5,7 @@ djangorestframework>=3.9.1
 requests>=2.19.2
 mysqlclient==1.4.2.post1
 pyaml==18.11.0
-ansible==2.7.16
+ansible==2.9.20
 coverage==5.0a5
 ssdeep
 safety
